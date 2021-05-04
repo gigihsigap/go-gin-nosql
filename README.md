@@ -13,14 +13,10 @@ Initialize project by:
 
 ## Troubleshooting
 
-### Postgres
-> Collection name: "account"
-> Database name: "test"
-> Client name: "cluster0"
-
-### SQLC
-When running `make sqlc` your terminal might say "sqlc.json doesn't exist". You need to specify your project directory. Manually typing down the location works if $(pwd) somehow doesn't work.
-
+### MongoDB
++ Collection name: "account"
++ Database name: "test"
++ Client name: "cluster0"
 
 ## Features:
 
