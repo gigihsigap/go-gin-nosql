@@ -4,23 +4,23 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
 	"time"
 
-	// "github.com/joho/godotenv"
+	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 // DBinstance function
 func DBinstance() *mongo.Client {
-		err := godotenv.Load(".env")
+	err := godotenv.Load(".env")
 
-		if err != nil {
-			log.Fatal("Error loading .env file")
-		}
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
 
 	MongoURI := os.Getenv("MONGODB_URL")
-	
 
 	client, err := mongo.NewClient(options.Client().ApplyURI(MongoURI))
 	if err != nil {
